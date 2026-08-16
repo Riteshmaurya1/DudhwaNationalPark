@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Manrope:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-bricolage: 'Bricolage Grotesque', serif;
+  --font-manrope: 'Manrope', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  --bg-primary: #050505;
+  --bg-card: #111111;
+  --color-orange: #F97316;
+  --color-green: #1F6F4A;
+  --color-border: #262626;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: #FFFFFF;
+  font-family: var(--font-manrope);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle Film Grain Layer */
+.bg-grain {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Custom Smooth Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #1F6F4A;
+}
+
+/* Text Selection */
+::selection {
+  background-color: #1F6F4A;
+  color: #FFFFFF;
+}
+
+/* Focus Ring Customization */
+*:focus-visible {
+  outline: 2px solid #1F6F4A;
+  outline-offset: 2px;
+}
+
+/* Aspect Ratio Utilities */
+.aspect-16-9 { aspect-ratio: 16 / 9; }
+.aspect-4-3 { aspect-ratio: 4 / 3; }
+.aspect-3-2 { aspect-ratio: 3 / 2; }
+.aspect-1-1 { aspect-ratio: 1 / 1; }
+.aspect-4-5 { aspect-ratio: 4 / 5; }
+.aspect-9-16 { aspect-ratio: 9 / 16; }
